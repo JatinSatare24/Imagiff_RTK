@@ -40,7 +40,7 @@ const ResultCard = ({ item }) => {
                     }}
                     className='bg-indigo-600 active:scale-95 text-white rounded px-3 py-1 cursor-pointer font-medium'
                 >
-                    Save
+                    Save to Collection
                 </button>
             </div>
         </div >

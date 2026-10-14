@@ -57,7 +57,7 @@ const ResultGrid = () => {
 
     }, [query, activeTab])
 
-    if (!query) return <h1>Please search for a term</h1>
+    if (!query) return <h1>Please search for a term!</h1>
     if (error) return <h1>Error occured, please try again!</h1>
     if (loading) return <h1>Loading...</h1>
 
@@ -65,14 +65,7 @@ const ResultGrid = () => {
         <div className='flex justify-between w-full flex-wrap gap-6 rounded overflow-auto px-10'>
             {results.map((item) => {
                 return <div key={item.id}>
-                    <a
-                        target='_blank'
-                        href={item.link}
-                        rel='noopener noreferrer'
-                        className='block'
-                    >
                         <ResultCard item={item} />
-                    </a>
                 </div>
             })}
 

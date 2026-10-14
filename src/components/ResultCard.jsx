@@ -1,6 +1,15 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { addCollection, addedToast } from '../redux/features/collectionSlice'
 
 const ResultCard = ({ item }) => {
+    const dispatch = useDispatch()
+
+    const addToCollection = (item) => {
+        dispatch(addCollection(item))
+        dispatch(addedToast())
+    }
+
     return (
         <div className='w-[18vw] relative h-80 bg-white rounded-xl overflow-hidden'>
             <a target='_blank' className='h-full' href={item.url}>
